@@ -35,7 +35,6 @@ int main(int argc, char const *argv[])
     while (!feof(streamIn))
     {
         fscanf(streamIn, "%d", &numero);
-        stringa = getc(streamIn);
         printf("%d\n", numero);
     }
 
