@@ -15,8 +15,10 @@ int main(int argc, char const *argv[])
 {
     FILE *streamIn;        // dichiarazione dello stream
     int numero; // numero temporaneo che poi viene convertito in binario
+    int i;
     char stringa; // carattere temporaneo per stringa
-    
+    char tuttestr[20][30];
+
     // controlla che vengano dati 2 argomenti 
     // if (argv[3] != ' ')
     //     printf("Inserire solo 2 argomenti");
@@ -32,13 +34,16 @@ int main(int argc, char const *argv[])
     }
 
     // operazioni di lettura del file
-    while (!feof(streamIn))
+    // while (!feof(streamIn))
+    // {
+    //     fscanf(streamIn, "%d", &numero);
+    //     printf("%d\n", numero);
+    // }
+    i=0;
+    while ( (fscanf(streamIn,"%s\n",stringa)) != NULL )
     {
-        fscanf(streamIn, "%d", &numero);
-        printf("%d\n", numero);
+      printf("stringa: %s\n",stringa);
     }
-
-    
 
     // chiusura dello stream
     fclose(streamIn);
